@@ -99,7 +99,7 @@ export const config  = {
         defaultTheme: 'dark',
 
         // 主题色 (16进制颜色值)
-        primaryColor: '#0F1C38',
+        primaryColor: '#8CA0BC',
 
         // 是否启用落地页 (true=启用, false=禁用)
         enableLandingPage: true // 默认启用
