@@ -6,7 +6,7 @@
 
 export const config  = {
     // 面板类型配置 - 请选择您使用的面板类型
-    PANEL_TYPE: 'Xiao-V2board', // 可选值: 'V2board', 'Xiao-V2board' 或 'Xboard'
+    PANEL_TYPE: 'Xboard', // 可选值: 'V2board', 'Xiao-V2board' 或 'Xboard'
     // 说明:
     // 1. V2board: 标准V2board面板，使用默认请求格式
     // 2. Xiao-V2board: Xiao修改版面板，使用特殊格式的请求参数
@@ -29,9 +29,7 @@ export const config  = {
         // 支持字符串形式(单个API地址)或数组形式(多个备选API地址)
         // 多个地址时，会按顺序检测可用性，并使用第一个可用的地址
         staticBaseUrl: [
-            'https://skhsn6q4pnv95.ezdemo.xyz/api/v1',
-            'https://skhsn6q4pnv95.ezdemo.xyz/api/v1',
-            'https://gy1v06omopzc8.ezdemo.xyz/api/v1'
+            'https://apiapi.ytjcok.com/api/v1',
         ],
       
         // 自动获取模式配置 (urlMode = 'auto'时使用)
@@ -66,10 +64,10 @@ export const config  = {
 
     // ====================  网站基础配置  ====================
     SITE_CONFIG: {
-        siteName: 'EZ THEME',
-        siteDescription: 'EZ UI',
+        siteName: '云图',
+        siteDescription: '云游无界，图揽天下。',
         // copyright会自动使用当前年份
-        copyright: `© ${new Date().getFullYear()} EZ THEME. All Rights Reserved.`,
+        copyright: `© ${new Date().getFullYear()} Yun Tu. All Rights Reserved.`,
 
         // 是否显示标题中的网站Logo (true=显示, false=隐藏)
         showLogo: true,
@@ -98,10 +96,10 @@ export const config  = {
         defaultLanguage: 'zh-CN',
 
         // 默认主题 ('light' 或 'dark')
-        defaultTheme: 'light',
+        defaultTheme: 'dark',
 
         // 主题色 (16进制颜色值)
-        primaryColor: '#355cc2',
+        primaryColor: '#0F1C38',
 
         // 是否启用落地页 (true=启用, false=禁用)
         enableLandingPage: true // 默认启用
@@ -115,7 +113,7 @@ export const config  = {
         // 验证码相关配置
         verificationCode: {
             // 是否在发送验证码后显示检查垃圾邮件的提示 (true=显示, false=不显示)
-            showCheckSpamTip: true,
+            showCheckSpamTip: false,
 
             // 显示检查垃圾邮件提示的延迟时间(毫秒)
             checkSpamTipDelay: 1000
@@ -124,7 +122,7 @@ export const config  = {
         // 认证页面弹窗公告配置
         popup: {
             // 是否启用弹窗
-            enabled: false,
+            enabled: true,
 
             // 弹窗标题
             title: "用户须知 (可自定义开启)",
@@ -133,24 +131,24 @@ export const config  = {
             content: "<p><strong>欢迎使用我们的服务！</strong></p><p>请注意以下事项：</p><ul><li>请妥善保管您的账号信息</li><li>如有问题请联系客服</li></ul>",
 
             // 冷却时间（小时），在此时间内不会再次显示弹窗
-            cooldownHours: 0,
+            cooldownHours: 1,
 
             // 等待时间（秒），用户需要等待多少秒才能关闭弹窗，设为0表示无需等待
-            closeWaitSeconds: 3
+            closeWaitSeconds: 0
         }
     },
 
     // 认证页面布局配置
     AUTH_LAYOUT_CONFIG: {
         // 布局类型: 'center' 为居中卡片布局, 'split' 为左右分栏布局
-        layoutType: 'center',
+        layoutType: 'split',
 
         // 左右分栏布局配置 (仅当 layoutType 为 'split' 时生效)
         splitLayout: {
             // 左侧区域内容配置
             leftContent: {
                 // 左侧背景图片URL或路径 (如不设置则不设置图片背景)
-                backgroundImage: 'https://www.loliapi.com/acg',
+                backgroundImage: 'https://i.mji.rip/2026/08/04/6019df9f40e94aafbf132960d624a683.png',
 
                 // 左上角网站名称配置
                 siteName: {
@@ -193,12 +191,12 @@ export const config  = {
 
         // 价格周期的显示顺序（从大到小）
         periodOrder: [
-            'three_year_price', // 三年
-            'two_year_price',   // 两年
-            'year_price',       // 一年
-            'half_year_price',  // 半年
-            'quarter_price',    // 季度
             'month_price',      // 月付
+            'quarter_price',    // 季度
+            'half_year_price',  // 半年
+            'year_price',       // 一年
+            'two_year_price',   // 两年
+            'three_year_price', // 三年
             'onetime_price'     // 一次性
         ],
 
@@ -214,7 +212,7 @@ export const config  = {
             content: "<p><strong>常规套餐默认每月订单日重置流量，您当月未用使用完的流量，不会累积到下个月</strong></p>",
 
             // 冷却时间（小时），在此时间内不会再次显示弹窗
-            cooldownHours: 0,
+            cooldownHours: 1,
 
             // 等待时间（秒），用户需要等待多少秒才能关闭弹窗，设为0表示无需等待
             closeWaitSeconds: 0
@@ -222,7 +220,7 @@ export const config  = {
     },
     ORDER_CONFIG: {
         // 下单前二次确认
-        confirmOrder: true,
+        confirmOrder: false,
         // 下单前二次确认内容
         confirmOrderContent: "<p><strong style='color: red'>无法提供相关教程和使用说明。</strong></p><p><strong style='color: red'>不会使用请勿购买，没有退款政策</strong></p>",
 
@@ -233,7 +231,7 @@ export const config  = {
         showUserEmail: false,
 
         // 是否为导入订阅按钮添加高光效果和填充底色 (true=添加效果, false=不添加效果)
-        importButtonHighlightBtnbgcolor: false,
+        importButtonHighlightBtnbgcolor: true,
 
         // ===============================
 
@@ -241,7 +239,7 @@ export const config  = {
         enableResetTraffic: true,
 
         // 重置流量按钮显示条件 ('always'=始终显示, 'low'=流量低于阈值时显示, 'depleted'=流量耗尽时显示)
-        resetTrafficDisplayMode: 'low',
+        resetTrafficDisplayMode: 'always',
 
         // 低流量阈值百分比 (1-100)，当剩余流量百分比低于此值时触发低流量警告
         lowTrafficThreshold: 10,
@@ -269,15 +267,15 @@ export const config  = {
     // 客户端下载配置
     CLIENT_CONFIG: {
         // 整个下载卡片显示控制
-        showDownloadCard: true,
+        showDownloadCard: false,
 
         // 平台显示控制 (true=显示, false=隐藏)
-        showIOS: true,
-        showAndroid: true,
-        showMacOS: true,
-        showWindows: true,
-        showLinux: true,
-        showOpenWrt: true,
+        showIOS: false,
+        showAndroid: false,
+        showMacOS: false,
+        showWindows: false,
+        showLinux: false,
+        showOpenWrt: false,
 
         // 客户端下载链接  //可以改成文档链接直接在新标签页打开
         clientLinks: {
@@ -293,9 +291,9 @@ export const config  = {
 
         // iOS平台
         showShadowrocket: true,
-        showSurge: true,
-        showStash: true,
-        showQuantumultX: true,
+        showSurge: false,
+        showStash: false,
+        showQuantumultX: false,
         showHiddifyIOS: true,
         showSingboxIOS: true,
         showLoon: true,
@@ -303,7 +301,7 @@ export const config  = {
         // Android平台客户端
         showFlClashAndroid: true,
         showV2rayNG: true,
-        showClashAndroid: true,
+        showClashAndroid: false,
         showSurfboard: true,
         showClashMetaAndroid: true,
         showNekobox: true,
@@ -313,7 +311,7 @@ export const config  = {
         // Windows平台客户端
         showFlClashWindows: true,
         showClashVergeWindows: true,
-        showClashWindows: true,
+        showClashWindows: false,
         showNekoray: true,
         showSingboxWindows: true,
         showHiddifyWindows: true,
@@ -321,11 +319,11 @@ export const config  = {
         // MacOS平台客户端
         showFlClashMac: true,
         showClashVergeMac: true,
-        showClashX: true,
+        showClashX: false,
         showClashMetaX: true,
-        showSurgeMac: true,
-        showStashMac: true,
-        showQuantumultXMac: true,
+        showSurgeMac: false,
+        showStashMac: false,
+        showQuantumultXMac: false,
         showSingboxMac: true,
         showHiddifyMac: true
     },
@@ -429,13 +427,13 @@ export const config  = {
     // 充值相关配置
     WALLET_CONFIG: {
         // 预设充值金额选项（单位：元）
-        presetAmounts: [6, 30, 68, 128, 256, 328, 648, 1280],
+        presetAmounts: [100,200,300,500,1000],
 
         // 默认选中的充值金额（如果设为null则不预选金额）
         defaultSelectedAmount: null,
 
         // 最小充值金额（单位：元）
-        minimumDepositAmount: 1
+        minimumDepositAmount: 10
     },
 
     // =======================================================
@@ -443,7 +441,7 @@ export const config  = {
     // 邀请页面配置
     INVITE_CONFIG: {
         // 是否在导航栏的邀请按钮上显示返利标记
-        showCommissionBadge: false,
+        showCommissionBadge: true,
 
         // 返佣记录每页显示数量（最小值为10，API限制每次请求最少需要返回10条记录）
         recordsPerPage: 10,
@@ -495,7 +493,7 @@ export const config  = {
             // 弹窗内容 (支持HTML)
             content: "<p>请您准确描述您的问题，再提交工单，以便我们更快帮助您。</p>",
             // 冷却时间（小时），在此时间内不会再次显示弹窗
-            cooldownHours: 24,
+            cooldownHours: 2,
             // 等待时间（秒），用户需要等待多少秒才能关闭弹窗，设为0表示无需等待
             closeWaitSeconds: 0
         },
@@ -529,7 +527,7 @@ export const config  = {
         showNodeDetails: false,
 
         // 是否允许查看节点详细信息（控制详情按钮和模态框）
-        allowViewNodeInfo: true
+        allowViewNodeInfo: false
     },
 
     // 客服系统配置
