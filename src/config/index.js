@@ -125,10 +125,10 @@ export const config  = {
             enabled: true,
 
             // 弹窗标题
-            title: "用户须知 (可自定义开启)",
+            title: "请收藏最新永久官网",
 
             // 弹窗内容 (支持HTML)
-            content: "<p><strong>欢迎使用我们的服务！</strong></p><p>请注意以下事项：</p><ul><li>请妥善保管您的账号信息</li><li>如有问题请联系客服</li></ul>",
+            content: "<p><strong>其余官网可能无法访问，请收藏 https://dashboard.nowhere.best 为永久官网</strong></p>",
 
             // 冷却时间（小时），在此时间内不会再次显示弹窗
             cooldownHours: 1,
