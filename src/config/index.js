@@ -128,7 +128,7 @@ export const config  = {
             title: "请收藏最新永久官网",
 
             // 弹窗内容 (支持HTML)
-            content: "<p><strong>其余官网可能无法访问，请收藏 https://dashboard.nowhere.best 为永久官网</strong></p>",
+            content: `<p><strong>其余官网可能无法访问，请收藏 <a href="https://dashboard.nowhere.best" target="_blank" rel="noopener noreferrer">https://dashboard.nowhere.best</a> 为永久官网</strong></p>`,
 
             // 冷却时间（小时），在此时间内不会再次显示弹窗
             cooldownHours: 1,
